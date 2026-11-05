@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Starich Recycling Technology Co. Ltd</title>
+<meta name="description" content="Starich Recycling Technology Co. Ltd, Aba, Nigeria. Recycled polyester staple fibre, fibre mattresses, pillows and industrial packaging.">
+<link rel="icon" type="image/png" href="img/logo-brand.png">
+<style>body{margin:0}[hidden]{display:none!important}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: corporate manufacturer site. Sticky two-tier header, full-width colour bands, content capped at 1200px. Single light look by choice. */
+:root{
+  color-scheme: light;
+  /* Starich brand guide: Starich green 60%, Dark green 20%, Leaf green 12%, Lemon green 8% */
+  --brand:#247E41;       /* Starich green: lead colour, bands, accents */
+  --forest:#1D6632;      /* Dark green: top bar, footer, headings */
+  --leaf:#247E41;        /* accent text and icons use Starich green */
+  --leafg:#9CCB5A;       /* Leaf green: small highlights */
+  --lime:#C5E86C;        /* Lemon green: buttons and highlights on green */
+  --mint:#e9f3ec;        /* light tint of Starich green */
+  --paper:#ffffff;
+  --ink:#14241a;
+  --muted:#55685b;
+  --line:#d5e5d9;
+  --warm:#f5f9f2;
+  --onbrand:#e2f1e6;     /* soft text on Starich green */
+  --display:"Manrope", "Segoe UI", system-ui, sans-serif;
+  --body:"Manrope", "Segoe UI", system-ui, sans-serif;
+  --numbers:"Anton", "Impact", "Arial Narrow", sans-serif;
+  --wrap:1200px;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--forest)}
+h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1.15;margin:0;text-wrap:balance;color:var(--forest)}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--lime);outline-offset:2px;border-radius:6px}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:72px}
+.band.tint{background:var(--mint)}
+.band.warm{background:var(--warm)}
+.band.dark{background:var(--brand);color:var(--onbrand)}
+.band.dark h2,.band.dark h3{color:#fff}
+.eyebrow{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf)}
+.band.dark .eyebrow{color:var(--lime)}
+.sec-head{display:grid;gap:10px;max-width:720px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(26px,3.4vw,38px)}
+.sec-head p{color:var(--muted);font-size:17px}
+.band.dark .sec-head p{color:var(--onbrand)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:13px 24px;font-family:var(--display);font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap;transition:transform .15s, box-shadow .15s}
+.btn-primary{background:var(--lime);color:var(--forest);box-shadow:0 6px 18px rgba(29,102,50,.22)}
+.btn-primary:hover{background:var(--leafg);transform:translateY(-1px);box-shadow:0 10px 24px rgba(29,102,50,.28)}
+.btn-ghost{background:transparent;color:var(--forest);border:2px solid var(--forest)}
+.btn-light{background:#fff;color:var(--forest)}
+.btn-outline-light{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+
+/* Top strip */
+.strip{background:var(--forest);color:var(--onbrand);font-size:13px}
+.strip .wrap{display:flex;gap:28px;justify-content:space-between;padding-block:8px;flex-wrap:wrap}
+.strip span{white-space:nowrap}
+@media (max-width:760px){.strip .hide-sm,.strip span:first-child{display:none}.strip .wrap{justify-content:center}}
+
+/* Header */
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:18px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.brand img{width:48px;height:48px;object-fit:contain}
+.brand b{display:block;font-family:var(--display);font-size:24px;font-weight:800;color:var(--forest);letter-spacing:.01em;line-height:1}
+.brand small{display:block;font-family:var(--display);font-size:9.5px;font-weight:600;letter-spacing:.16em;color:var(--leaf);white-space:nowrap;margin-top:4px}
+nav.main{display:flex;align-items:center;gap:4px;margin-left:auto}
+.nav-item{position:relative}
+.nav-link{display:flex;align-items:center;gap:6px;padding:10px 14px;border-radius:999px;background:none;border:0;font-family:var(--body);font-weight:600;font-size:15.5px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.nav-link:hover,.nav-item:focus-within>.nav-link,.nav-link.active{background:var(--mint);color:var(--forest)}
+.nav-link svg{width:12px;height:12px;transition:transform .2s}
+.nav-item:hover .nav-link svg,.nav-item:focus-within .nav-link svg{transform:rotate(180deg)}
+.dropdown{position:absolute;top:calc(100% + 6px);left:0;min-width:250px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 18px 40px rgba(23,58,34,.14);padding:8px;display:grid;opacity:0;visibility:hidden;transform:translateY(6px);transition:.18s}
+.nav-item:hover .dropdown,.nav-item:focus-within .dropdown{opacity:1;visibility:visible;transform:none}
+.dropdown a{display:grid;gap:1px;padding:10px 12px;border-radius:10px;text-decoration:none}
+.dropdown a:hover{background:var(--mint)}
+.dropdown a b{font-weight:700;font-size:14.5px;color:var(--forest)}
+.dropdown a span{font-size:12.5px;color:var(--muted)}
+.dropdown hr{border:0;border-top:1px solid var(--line);margin:6px 4px}
+.icons{display:flex;align-items:center;gap:6px;margin-left:8px}
+.icon-btn{position:relative;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:none;border:0;color:var(--forest)}
+.icon-btn:hover{background:var(--mint)}
+.icon-btn svg{width:24px;height:24px}
+.cart-count{position:absolute;top:4px;right:2px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;background:var(--leaf);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center}
+.menu-btn{display:none}
+@media (max-width:1180px){nav.main .nav-link{padding:10px 10px;font-size:15px}}
+@media (max-width:1080px){
+  nav.main{display:none}
+  .menu-btn{display:grid}
+  .icons{margin-left:auto}
+  .icons .btn{display:none}
+}
+
+@media (max-width:520px){
+  header.site .wrap{gap:8px}
+  .brand img{width:40px;height:40px}
+  .brand b{font-size:20px}
+  .brand small{font-size:7.5px;letter-spacing:.1em}
+  .icons{gap:0;margin-left:auto}
+  .icons .icon-btn[aria-label="Account"]{display:none}
+  .icon-btn{width:40px;height:40px}
+}
+
+/* Mobile drawer */
+.drawer{position:fixed;inset:0;z-index:80;display:none}
+.drawer.open{display:block}
+.drawer .scrim{position:absolute;inset:0;background:rgba(10,30,15,.45)}
+.drawer .panel{position:absolute;top:0;right:0;bottom:0;width:min(360px,88vw);background:#fff;overflow:auto;padding:calc(18px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 20px;display:grid;align-content:start;gap:4px}
+.drawer details{border-bottom:1px solid var(--line)}
+.drawer summary,.drawer .d-link{display:flex;justify-content:space-between;align-items:center;padding:14px 4px;font-family:var(--display);font-weight:700;color:var(--forest);text-decoration:none;list-style:none;cursor:pointer}
+.drawer summary::-webkit-details-marker{display:none}
+.drawer .d-link{border-bottom:1px solid var(--line)}
+.drawer details a{display:block;padding:9px 12px;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.drawer details div{padding-bottom:10px}
+.drawer .close{justify-self:end}
+
+/* Views */
+.view{display:none}
+.view.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:.4}to{opacity:1}}
+
+/* Hero (home) */
+.hero{position:relative;color:#fff;background:var(--forest)}
+.hero::before{content:"";position:absolute;inset:0;background:url("img/hero-factory.jpg") center/cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,80,40,.94) 0%,rgba(29,102,50,.72) 45%,rgba(36,126,65,.12) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-block:96px 104px;display:grid;gap:22px;max-width:var(--wrap)}
+.hero h1{color:#fff;font-size:clamp(34px,5.4vw,62px);font-weight:800;max-width:780px;letter-spacing:-.01em}
+.hero p{font-size:clamp(16px,1.6vw,19px);max-width:560px;color:var(--onbrand)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);font-size:13px;font-weight:600;color:#fff}
+
+/* Page hero (inner pages) */
+.phero{position:relative;background:var(--brand);color:#fff;overflow:hidden}
+.phero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.35}
+.phero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(29,102,50,.96),rgba(36,126,65,.62))}
+.phero .wrap{position:relative;z-index:1;padding-block:64px 70px;display:grid;gap:14px}
+.phero h1{color:#fff;font-size:clamp(30px,4.4vw,50px);font-weight:800;max-width:760px}
+.phero p{max-width:620px;color:var(--onbrand);font-size:17px}
+.crumbs{font-size:13px;color:var(--lime)}
+.crumbs a{color:var(--onbrand);text-decoration:none}
+.subnav{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.subnav a{padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.3);color:#fff;text-decoration:none;font-size:14px;font-weight:600}
+.subnav a:hover{background:rgba(255,255,255,.12)}
+
+/* Divisions (home) */
+.divisions{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.division{position:relative;display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--line);text-decoration:none;transition:transform .2s, box-shadow .2s}
+.division:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(23,58,34,.12)}
+.division .ph{aspect-ratio:4/3;overflow:hidden;background:var(--mint)}
+.division .ph img{width:100%;height:100%;object-fit:cover}
+.division .txt{padding:22px 22px 24px;display:grid;gap:8px;flex:1}
+.division .num{font-family:var(--numbers);font-size:30px;font-weight:400;line-height:1;color:var(--brand)}
+.division h3{font-size:23px}
+.division p{color:var(--muted);font-size:15px}
+.division ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.division li{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--mint);color:var(--forest)}
+.division .go{margin-top:auto;padding-top:10px;font-family:var(--display);font-weight:700;color:var(--leaf);font-size:14px}
+@media (max-width:900px){.divisions{grid-template-columns:1fr}}
+
+/* Feature grid */
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.feature{display:grid;gap:10px;align-content:start}
+.feature .ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--mint);color:var(--leaf)}
+.band.dark .feature .ic{background:rgba(255,255,255,.08);color:var(--lime)}
+.feature .ic svg{width:24px;height:24px}
+.feature h3{font-size:18px}
+.feature p{color:var(--muted);font-size:15px}
+.band.dark .feature p{color:var(--onbrand)}
+@media (max-width:900px){.features{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.features{grid-template-columns:1fr}}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stat{padding:22px;border-radius:var(--radius);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.stat b{display:block;font-family:var(--numbers);font-weight:400;letter-spacing:.01em;font-size:clamp(34px,4vw,50px);line-height:1.1;color:var(--lime);font-variant-numeric:tabular-nums}
+.stat span{font-size:14px;color:var(--onbrand)}
+.band:not(.dark) .stat{background:#fff;border-color:var(--line)}
+.band:not(.dark) .stat b{color:var(--forest)}
+.band:not(.dark) .stat span{color:var(--muted)}
+@media (max-width:800px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* Split blocks */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.split.rev>.media{order:2}
+.split .media{border-radius:20px;overflow:hidden;aspect-ratio:4/3;background:var(--mint)}
+.split .media img{width:100%;height:100%;object-fit:cover}
+.split .copy{display:grid;gap:16px;min-width:0}
+.split h2{font-size:clamp(26px,3.2vw,36px)}
+.split p{color:var(--muted);font-size:16.5px}
+.ticks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.ticks li{display:flex;gap:10px;align-items:flex-start;font-weight:600}
+.ticks li::before{content:"";flex:0 0 20px;height:20px;margin-top:2px;border-radius:50%;background:var(--leaf) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/12px no-repeat}
+@media (max-width:900px){.split{grid-template-columns:1fr;gap:28px}.split.rev>.media{order:0}}
+
+/* Product cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid.four{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1000px){.grid.four{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.grid,.grid.four{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.card .ph{position:relative;aspect-ratio:1/1;background:var(--warm);overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.card:hover .ph img{transform:scale(1.04)}
+.card .tag{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:999px;background:var(--forest);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.04em}
+.card .body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card .cat{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf)}
+.card h3{font-size:17.5px}
+.card p{color:var(--muted);font-size:14.5px}
+.card .specs{display:flex;flex-wrap:wrap;gap:6px}
+.card .specs span{font-size:12px;font-weight:600;padding:3px 9px;border-radius:6px;background:var(--mint);color:var(--forest)}
+.card .foot{margin-top:auto;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.price{font-family:var(--display);font-weight:800;color:var(--forest);font-size:18px;font-variant-numeric:tabular-nums}
+.price small{font-family:var(--body);font-weight:600;color:var(--muted);font-size:12.5px}
+.add{border:0;border-radius:999px;padding:9px 16px;background:var(--forest);color:#fff;font-weight:700;font-size:13.5px}
+.add:hover{background:var(--leaf)}
+
+/* Series cards */
+.series{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media (max-width:900px){.series{grid-template-columns:1fr}}
+.serie{display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.serie .ph{aspect-ratio:16/11;overflow:hidden}
+.serie .ph img{width:100%;height:100%;object-fit:cover}
+.serie .body{padding:22px;display:grid;gap:10px;flex:1;align-content:start}
+.serie .lvl{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--muted)}
+.meter{display:flex;gap:3px}
+.meter i{width:16px;height:6px;border-radius:3px;background:var(--line)}
+.meter i.on{background:var(--leaf)}
+.serie h3{font-size:22px}
+.serie p{color:var(--muted);font-size:15px}
+
+/* Process steps */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;counter-reset:s}
+.step{padding:20px 16px;border-radius:var(--radius);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:grid;gap:8px;align-content:start}
+.step .n{font-family:var(--numbers);font-size:28px;font-weight:400;line-height:1;color:var(--lime)}
+.step h4{color:#fff;font-size:17px}
+.step p{font-size:13.5px;color:var(--onbrand)}
+@media (max-width:1000px){.steps{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.steps{grid-template-columns:1fr 1fr}}
+
+/* Spec table */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:520px}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line)}
+th{font-family:var(--display);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--warm)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700;color:var(--forest)}
+
+/* Applications */
+.apps{display:flex;flex-wrap:wrap;gap:10px}
+.apps span{padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;color:var(--forest)}
+
+/* Certificates (Mouka-style, one by one) */
+.cert-list{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media (max-width:1000px){.cert-list{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.cert-list{grid-template-columns:1fr}}
+.cert-card{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .2s, box-shadow .2s}
+.cert-card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(23,58,34,.12)}
+.cert-card .ph{aspect-ratio:3/4;background:var(--warm);display:grid;place-items:center;padding:18px;border-bottom:1px solid var(--line)}
+.cert-card .ph img{max-height:100%;width:auto;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.cert-card .ph img.logo-only{box-shadow:none;max-width:60%}
+.cert-card .body{padding:16px 18px 18px;display:grid;gap:4px}
+.cert-card h3{font-size:17px}
+.cert-card span{font-size:13.5px;color:var(--muted)}
+.cert-card .go{font-family:var(--display);font-weight:700;color:var(--leaf);font-size:13.5px;margin-top:6px}
+
+.cert-view{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+@media (max-width:900px){.cert-view{grid-template-columns:1fr;gap:28px}}
+.cert-frame{background:var(--warm);border:1px solid var(--line);border-radius:20px;padding:clamp(16px,3vw,36px);display:grid;place-items:center}
+.cert-frame button{border:0;background:none;padding:0;cursor:zoom-in}
+.cert-frame img{box-shadow:0 14px 40px rgba(0,0,0,.16);max-height:78vh;width:auto}
+.cert-frame .badge-big{max-width:280px;box-shadow:none}
+.cert-meta{display:grid;gap:18px;min-width:0}
+.cert-meta h2{font-size:clamp(28px,3.6vw,42px)}
+.cert-meta .sub{font-family:var(--display);font-weight:600;color:var(--leaf)}
+.cert-meta p{color:var(--muted);font-size:16.5px}
+.facts{display:grid;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.facts div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:15px}
+.facts div:last-child{border-bottom:0}
+.facts dt{font-weight:700;color:var(--forest)}
+.facts dd{margin:0;color:var(--ink);min-width:0}
+@media (max-width:480px){.facts div{grid-template-columns:1fr;gap:2px}}
+.cert-pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}
+.cert-pager a{display:grid;gap:2px;text-decoration:none;padding:12px 18px;border-radius:12px;border:1px solid var(--line);min-width:0}
+.cert-pager a:hover{background:var(--mint)}
+.cert-pager small{font-size:12px;color:var(--muted);font-weight:600}
+.cert-pager b{font-family:var(--display);color:var(--forest)}
+.cert-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+.cert-tabs a{padding:9px 16px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-weight:700;font-size:14px;color:var(--forest);background:#fff}
+.cert-tabs a.on{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+/* Badge strip */
+.badge-strip{display:flex;align-items:center;justify-content:center;gap:clamp(24px,5vw,64px);flex-wrap:wrap}
+.badge-strip img{height:64px;width:auto;object-fit:contain}
+
+/* Quiz */
+.quiz{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(20px,4vw,40px);display:grid;gap:22px;max-width:860px}
+.quiz .progress{height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.quiz .progress i{display:block;height:100%;background:linear-gradient(90deg,var(--leaf),var(--lime));transition:width .3s}
+.quiz .qnum{font-size:13px;font-weight:700;color:var(--muted)}
+.quiz h3{font-size:clamp(20px,2.6vw,26px)}
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:560px){.opts{grid-template-columns:1fr}}
+.opt{text-align:left;padding:16px 18px;border-radius:14px;border:2px solid var(--line);background:var(--warm);display:grid;gap:2px}
+.opt:hover{border-color:var(--leaf)}
+.opt b{font-family:var(--display);color:var(--forest);font-size:16px}
+.opt span{font-size:13.5px;color:var(--muted)}
+.result{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center}
+.result img{border-radius:14px;aspect-ratio:1/1;object-fit:cover;width:100%}
+.result .copy{display:grid;gap:10px;min-width:0}
+@media (max-width:560px){.result{grid-template-columns:1fr}}
+.linkbtn{background:none;border:0;color:var(--leaf);font-weight:700;padding:0;text-decoration:underline}
+
+/* Depots */
+.depots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.depots{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.depots{grid-template-columns:1fr}}
+.depot{padding:18px 20px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);display:grid;gap:2px}
+.depot b{font-family:var(--display);font-size:18px;color:var(--forest)}
+.depot span{font-size:14px;color:var(--muted)}
+.depot em{font-style:normal;font-size:12px;font-weight:700;color:var(--leaf);letter-spacing:.06em;text-transform:uppercase}
+
+/* Shop */
+.shop-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:28px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:700;font-size:14px;color:var(--forest)}
+.filters button.on{background:var(--forest);color:#fff;border-color:var(--forest)}
+.shop-count{font-size:14px;color:var(--muted)}
+
+/* Quote / CTA band */
+.cta-band{background:linear-gradient(120deg,var(--forest),var(--brand));color:#fff;border-radius:22px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.cta-band h2{color:#fff;font-size:clamp(24px,3vw,34px)}
+.cta-band p{color:var(--onbrand);margin-top:10px}
+.cta-band .acts{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:820px){.cta-band{grid-template-columns:1fr}.cta-band .acts{justify-content:flex-start}}
+
+/* Values */
+.values{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.value{padding:22px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);display:grid;gap:8px;align-content:start}
+.value h3{font-size:18px}
+.value p{font-size:14.5px;color:var(--muted)}
+@media (max-width:900px){.values{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.values{grid-template-columns:1fr}}
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.mv div{padding:28px;border-radius:18px;background:var(--brand);color:var(--onbrand);display:grid;gap:10px}
+.mv h3{color:#fff;font-size:22px}
+@media (max-width:760px){.mv{grid-template-columns:1fr}}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.contact-lines{display:grid;gap:14px}
+.contact-lines div{display:grid;gap:2px}
+.contact-lines small{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf)}
+.contact-lines b{font-family:var(--display);font-size:18px;color:var(--forest);user-select:all}
+form.quote{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+form.quote label{display:grid;gap:6px;font-size:13px;font-weight:700;color:var(--forest);min-width:0}
+form.quote .full{grid-column:1/-1}
+form.quote input,form.quote select,form.quote textarea{font:inherit;font-size:15px;padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:var(--warm);color:var(--ink);width:100%}
+form.quote textarea{min-height:96px;resize:vertical}
+@media (max-width:520px){form.quote{grid-template-columns:1fr}}
+
+/* Footer */
+footer.site{background:var(--forest);color:var(--onbrand);padding-block:56px 28px;font-size:14.5px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:32px}
+@media (max-width:980px){.foot-top{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot-top{grid-template-columns:1fr}}
+footer.site h4{color:#fff;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer.site a{text-decoration:none;color:var(--onbrand)}
+footer.site a:hover{color:#fff}
+.foot-brand{display:grid;gap:14px;align-content:start}
+.foot-brand .brand b{color:#fff}
+.foot-brand .brand small{color:var(--lime)}
+.news{display:flex;gap:8px;flex-wrap:wrap}
+.news input{flex:1;min-width:0;padding:11px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font:inherit}
+.news input::placeholder{color:var(--leafg)}
+.foot-bottom{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+
+/* Lightbox + toast */
+.lightbox{position:fixed;inset:0;z-index:90;background:rgba(8,20,11,.88);display:none;place-items:center;padding:calc(20px + env(safe-area-inset-top,0px)) 16px calc(20px + env(safe-area-inset-bottom,0px))}
+.lightbox.open{display:grid}
+.lightbox img{max-height:92vh;width:auto;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lightbox button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:var(--forest);font-size:22px;font-weight:700}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--forest);color:#fff;padding:12px 20px;border-radius:999px;font-weight:600;font-size:14.5px;opacity:0;pointer-events:none;transition:.25s;z-index:95;max-width:calc(100vw - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.wa{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.2)}
+.wa svg{width:30px;height:30px;fill:#fff}
+.mt-40{margin-top:40px}
+.center{text-align:center;justify-items:center;margin-inline:auto}
+</style>
+
+</head>
+<body>
+<!-- Top strip -->
+<div class="strip"><div class="wrap">
+  <span>Aba Industrial Park, Abia State, Nigeria</span>
+  <span class="hide-sm">SON MANCAP · OEKO-TEX® Class I · GRS 4.0 certified</span>
+  <span>Talk to us: +234 808 033 9999</span>
+</div></div>
+
+<!-- Header -->
+<header class="site"><div class="wrap">
+  <a class="brand" href="#home" aria-label="Starich home">
+    <img src="img/logo-brand.png" alt="">
+    <span><b>STARICH</b><small>RECYCLING TECHNOLOGY CO. LTD</small></span>
+  </a>
+  <nav class="main" aria-label="Main">
+    <div class="nav-item">
+      <a class="nav-link" href="#chemical-fibre" data-nav="chemical-fibre">Chemical Fibre <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></a>
+      <div class="dropdown">
+        <a href="#chemical-fibre"><b>Fibre Products</b><span>3D hollow staple fibre, bales, waddings</span></a>
+        <a href="#fibre-specs"><b>Technical Specifications</b><span>Denier, recovery, standards</span></a>
+        <a href="#fibre-supply"><b>Bulk, OEM &amp; Export Supply</b><span>For manufacturers and buyers</span></a>
+        <hr>
+        <a href="#sustainability"><b>Sustainability</b><span>Our circular process and impact</span></a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#home-textile" data-nav="home-textile">Home Textile <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></a>
+      <div class="dropdown">
+        <a href="#mattresses"><b>Fibre Mattresses</b><span>Our mattress series</span></a>
+        <a href="#pillows"><b>Pillows</b><span>High-loft fibre pillow inserts</span></a>
+        <a href="#mother-child"><b>Mother &amp; Child</b><span>Safe, food-grade baby play mats</span></a>
+        <hr>
+        <a href="#find-your-fit"><b>Find Your Fit</b><span>Pick the right mattress in a minute</span></a>
+      </div>
+    </div>
+    <div class="nav-item"><a class="nav-link" href="#packaging" data-nav="packaging">Packaging</a></div>
+    <div class="nav-item"><a class="nav-link" href="#about" data-nav="about">About</a></div>
+    <div class="nav-item">
+      <a class="nav-link" href="#qualifications" data-nav="qualifications">Qualifications <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></a>
+      <div class="dropdown" id="certMenu"></div>
+    </div>
+  </nav>
+  <div class="icons">
+    <button class="icon-btn" type="button" aria-label="Account" data-toast="Account sign in is available on the live site."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></button>
+    <a class="icon-btn" href="#shop" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><span class="cart-count" id="cartCount" hidden>0</span></a>
+    <a class="btn btn-primary" href="#shop">Shop Now</a>
+    <button class="icon-btn menu-btn" type="button" aria-label="Open menu" id="menuBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</div></header>
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="scrim" data-close></div>
+  <div class="panel" role="dialog" aria-label="Menu">
+    <button class="icon-btn close" type="button" aria-label="Close menu" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <details><summary>Chemical Fibre <span>+</span></summary><div>
+      <a href="#chemical-fibre">Fibre Products</a><a href="#fibre-specs">Technical Specifications</a><a href="#fibre-supply">Bulk, OEM &amp; Export Supply</a><a href="#sustainability">Sustainability</a>
+    </div></details>
+    <details><summary>Home Textile <span>+</span></summary><div>
+      <a href="#mattresses">Fibre Mattresses</a><a href="#pillows">Pillows</a><a href="#mother-child">Mother &amp; Child</a><a href="#find-your-fit">Find Your Fit</a>
+    </div></details>
+    <a class="d-link" href="#packaging">Packaging</a>
+    <a class="d-link" href="#about">About</a>
+    <details><summary>Qualifications <span>+</span></summary><div id="certMenuM"></div></details>
+    <a class="btn btn-primary mt-40" href="#shop" style="justify-content:center">Shop Now</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ================= HOME ================= -->
+<section class="view" data-view="home">
+  <div class="hero"><div class="wrap">
+    <span class="eyebrow" style="color:var(--lime)">Chemical fibre manufacturer · Aba, Nigeria</span>
+    <h1>We make the fibre. Then we make it into comfort.</h1>
+    <p>Starich Recycling Technology Co. Ltd turns recovered PET into premium polyester staple fibre, and builds that fibre into mattresses, pillows and industrial packaging for homes and businesses across West Africa.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="#chemical-fibre">Explore Chemical Fibre</a>
+      <a class="btn btn-outline-light" href="#home-textile">See Home Textile</a>
+    </div>
+    <div class="badges">
+      <span class="chip">OEKO-TEX® Standard 100, Class I</span>
+      <span class="chip">Intertek GRS 4.0</span>
+      <span class="chip">ISO 9001:2015</span>
+      <span class="chip">SON MANCAP</span>
+    </div>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">What we do</span><h2>Three divisions. One material at the heart of them all.</h2><p>Everything Starich sells starts in our own fibre line, so quality is controlled from raw polymer to finished product.</p></div>
+    <div class="divisions">
+      <a class="division" href="#chemical-fibre">
+        <div class="ph"><img src="img/3d-fiber.jpg" alt="3D hollow polyester staple fibre" loading="lazy"></div>
+        <div class="txt"><span class="num">01</span><h3>Chemical Fibre</h3><p>Recycled 3D hollow polyester staple fibre and nonwoven waddings for bedding, furniture, toys and textile makers.</p>
+          <ul><li>Staple fibre</li><li>Fibre bales</li><li>Waddings</li></ul><span class="go">View fibre range →</span></div>
+      </a>
+      <a class="division" href="#home-textile">
+        <div class="ph"><img src="img/mattress-starich-1.jpg" alt="Starich fibre mattress in a bedroom" loading="lazy"></div>
+        <div class="txt"><span class="num">02</span><h3>Home Textile</h3><p>Fibre mattresses in different series, high-loft pillows and safe baby mats, built from the fibre we make.</p>
+          <ul><li>Mattresses</li><li>Pillows</li><li>Baby mats</li></ul><span class="go">View home textile →</span></div>
+      </a>
+      <a class="division" href="#packaging">
+        <div class="ph"><img src="img/woven-sacks.jpg" alt="Woven sacks and straps in a warehouse" loading="lazy"></div>
+        <div class="txt"><span class="num">03</span><h3>Packaging</h3><p>Heavy-duty PP woven sacks, PET packing straps and reusable woven shopping bags for industry and retail.</p>
+          <ul><li>Woven sacks</li><li>Packing belts</li><li>Shopping bags</li></ul><span class="go">View packaging →</span></div>
+      </a>
+    </div>
+  </div></div>
+
+  <div class="band dark"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Why Starich</span><h2>A material company first</h2><p>Because we spin our own fibre, we control the quality, cost and supply of everything we build.</p></div>
+    <div class="stats">
+      <div class="stat"><b>30,000T+</b><span>Fibre produced every year</span></div>
+      <div class="stat"><b>1,200+</b><span>Local workforce</span></div>
+      <div class="stat"><b>30%+</b><span>Lower carbon than virgin polyester</span></div>
+      <div class="stat"><b>6</b><span>Regional depots in Nigeria</span></div>
+    </div>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">Certified and verified</span><h2>Independently certified, from fibre to finished product</h2></div>
+    <div class="badge-strip">
+      <a href="#cert-oeko-tex" aria-label="OEKO-TEX certificate"><img src="img/badge_oeko.png" alt="OEKO-TEX"></a>
+      <a href="#cert-grs" aria-label="Global Recycled Standard certificate"><img src="img/badge_grs.png" alt="Global Recycled Standard"></a>
+      <a href="#cert-son" aria-label="SON MANCAP"><img src="img/badge_son.png" alt="Standards Organisation of Nigeria"></a>
+      <a href="#cert-iso-9001" aria-label="ISO 9001 certificate" style="font-family:var(--display);font-weight:800;font-size:22px;color:var(--forest);text-decoration:none;border:3px solid var(--forest);border-radius:10px;padding:8px 14px">ISO 9001</a>
+    </div>
+    <div class="center mt-40" style="display:grid"><a class="btn btn-ghost" href="#qualifications">View all certificates</a></div>
+  </div></div>
+
+  <div class="band tint"><div class="wrap">
+    <div class="cta-band">
+      <div><h2>Buying fibre, mattresses or packaging in bulk?</h2><p>Distributors, hotels, manufacturers and export buyers get tiered pricing and a dedicated account manager.</p></div>
+      <div class="acts"><a class="btn btn-primary" href="#contact">Request a Quote</a><a class="btn btn-outline-light" href="https://wa.me/2348080339999" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ================= CHEMICAL FIBRE ================= -->
+<section class="view" data-view="chemical-fibre">
+  <div class="phero"><div class="bg" style="background-image:url('img/cat_fibre.jpg')"></div><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / Chemical Fibre</div>
+    <h1>Chemical Fibre</h1>
+    <p>Recycled 3D hollow conjugated polyester staple fibre, made in our Aba plant and supplied to manufacturers of bedding, furniture, textiles, toys and nonwovens across the region.</p>
+    <div class="subnav"><a href="#fibre-products">Products</a><a href="#fibre-specs">Specifications</a><a href="#fibre-supply">Bulk &amp; Export</a><a href="#sustainability">Sustainability</a></div>
+  </div></div>
+
+  <div class="band" id="s-fibre-products"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Fibre products</span><h2>Our fibre range</h2><p>Siliconised and non-siliconised grades, in bales or as finished nonwoven rolls.</p></div>
+    <div class="grid" data-products="fibre"></div>
+  </div></div>
+
+  <div class="band tint" id="s-fibre-specs"><div class="wrap">
+    <div class="split">
+      <div class="copy">
+        <span class="eyebrow">Technical specifications</span>
+        <h2>Engineered for loft, bounce and safety</h2>
+        <p>Every batch is checked for denier, tensile strength, crimp and thermal loft during spinning, so the fibre performs the same roll after roll.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Property</th><th>Starich staple fibre</th></tr></thead>
+          <tbody>
+            <tr><td>Fibre type</td><td>3D hollow conjugated PET staple fibre</td></tr>
+            <tr><td>Fineness</td><td>7D to 15D</td></tr>
+            <tr><td>Finish</td><td>Siliconised and non-siliconised</td></tr>
+            <tr><td>Elastic recovery</td><td>Above 92%</td></tr>
+            <tr><td>Flame retardancy</td><td>BS 5852</td></tr>
+            <tr><td>Certification</td><td>Intertek GRS 4.0, OEKO-TEX® Class I, SON MANCAP</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="media"><img src="img/3d-fiber.jpg" alt="Close-up of white hollow fibre" loading="lazy"></div>
+    </div>
+    <div class="mt-40" style="display:grid;gap:14px">
+      <span class="eyebrow">Where our fibre goes</span>
+      <div class="apps"><span>Mattresses &amp; bedding</span><span>Pillows &amp; cushions</span><span>Upholstered furniture</span><span>Soft toys</span><span>Quilts &amp; duvets</span><span>Nonwovens &amp; waddings</span><span>Thermal insulation</span></div>
+    </div>
+  </div></div>
+
+  <div class="band" id="s-fibre-supply"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">For business</span><h2>Bulk, OEM and export supply</h2><p>One partner for the whole value chain, from raw fibre to finished product under your own brand.</p></div>
+    <div class="features">
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/></svg></div><h3>Bulk &amp; wholesale</h3><p>Tiered volume pricing for manufacturers, with flexible minimum order quantities.</p></div>
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 12h6M12 9v6"/></svg></div><h3>OEM &amp; private label</h3><p>Fibre to finished goods, produced to your specification and packed under your brand.</p></div>
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><h3>International trade</h3><p>Export-ready fibre with full data sheets and certificates, shipped through our Port Harcourt depot.</p></div>
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg></div><h3>Certificates on request</h3><p>We share certification documents and technical data sheets with every serious enquiry.</p></div>
+    </div>
+    <div class="mt-40"><a class="btn btn-primary" href="#contact">Request a fibre quote</a></div>
+  </div></div>
+
+  <!-- Sustainability sits at the bottom of the Chemical Fibre page -->
+  <div class="band dark" id="s-sustainability"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Sustainability</span><h2>We don't just recover materials. We reimagine what they can become.</h2><p>Across our Aba industrial park, post-consumer PET becomes engineered fibre that performs like virgin material, at a fraction of the environmental cost.</p></div>
+    <div class="stats">
+      <div class="stat"><b>30,000T+</b><span>Fibre regenerated every year</span></div>
+      <div class="stat"><b>30%+</b><span>Lower carbon than virgin polyester</span></div>
+      <div class="stat"><b>1,200+</b><span>Jobs supported</span></div>
+      <div class="stat"><b>100%</b><span>Engineered PET staple fibre</span></div>
+    </div>
+    <h3 class="mt-40" style="font-size:22px;margin-bottom:18px">The closed loop, from bottle to bed</h3>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><h4>Collect</h4><p>Post-consumer PET is gathered from communities and waste streams.</p></div>
+      <div class="step"><span class="n">02</span><h4>Sort</h4><p>Material is cleaned, sorted by grade and prepared for processing.</p></div>
+      <div class="step"><span class="n">03</span><h4>Regenerate</h4><p>Polymer is broken down and reformed into reusable raw material.</p></div>
+      <div class="step"><span class="n">04</span><h4>Spin fibre</h4><p>Continuous melt-spinning produces premium 3D staple fibre.</p></div>
+      <div class="step"><span class="n">05</span><h4>Manufacture</h4><p>Fibre becomes mattresses, pillows, waddings and more.</p></div>
+      <div class="step"><span class="n">06</span><h4>Deliver</h4><p>Finished goods ship nationwide from six regional depots.</p></div>
+    </div>
+    <ul class="ticks mt-40" style="color:var(--onbrand)">
+      <li>Closed-loop processing of post-consumer PET</li>
+      <li>Certified recycled content under Intertek GRS 4.0</li>
+      <li>Traceable, compliant supply chain</li>
+    </ul>
+  </div></div>
+</section>
+
+<!-- ================= HOME TEXTILE ================= -->
+<section class="view" data-view="home-textile">
+  <div class="phero"><div class="bg" style="background-image:url('img/mattress-starich-2.jpg')"></div><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / Home Textile</div>
+    <h1>Home Textile</h1>
+    <p>Fibre mattresses, pillows and baby mats built from the fibre we make ourselves. Firm support, cool and breathable for our climate.</p>
+    <div class="subnav"><a href="#mattresses">Mattresses</a><a href="#pillows">Pillows</a><a href="#mother-child">Mother &amp; Child</a><a href="#find-your-fit">Find Your Fit</a></div>
+  </div></div>
+
+  <div class="band" id="s-mattresses"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Fibre mattresses</span><h2>Choose your mattress series</h2><p>Every series uses our 3D vertical-fibre core for even support and airflow. Pick the firmness and budget that suits you.</p></div>
+    <div class="series">
+      <div class="serie">
+        <div class="ph"><img src="img/mattress-starich-1.jpg" alt="Orthopaedic series mattress" loading="lazy"></div>
+        <div class="body"><span class="eyebrow">Series 1</span><h3>Orthopaedic Series</h3>
+          <div class="lvl">Firmness <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span> Firm</div>
+          <p>High-density, hot-press thermal-bonded core for firm back support and correct spinal alignment.</p>
+          <div class="foot" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px"><button class="add" data-add="Orthopaedic Series Mattress">Add to cart</button></div></div>
+      </div>
+      <div class="serie">
+        <div class="ph"><img src="img/mattress-starich-2.jpg" alt="Comfort series mattress" loading="lazy"></div>
+        <div class="body"><span class="eyebrow">Series 2</span><h3>Comfort Series</h3>
+          <div class="lvl">Firmness <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span> Medium</div>
+          <p>A balanced feel for everyday sleep, with a quilted top layer over a resilient fibre core.</p>
+          <div class="foot" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px"><button class="add" data-add="Comfort Series Mattress">Enquire</button></div></div>
+      </div>
+      <div class="serie">
+        <div class="ph"><img src="img/p_mattress.jpg" alt="Classic series mattress" loading="lazy" style="object-position:center 40%"></div>
+        <div class="body"><span class="eyebrow">Series 3</span><h3>Classic Series</h3>
+          <div class="lvl">Firmness <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span> Medium firm</div>
+          <p>Durable, value-for-money support for homes, hostels and institutions.</p>
+          <div class="foot" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px"><button class="add" data-add="Classic Series Mattress">Enquire</button></div></div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="band tint" id="s-pillows"><div class="wrap">
+    <div class="split">
+      <div class="media"><img src="img/pillow-mercury-2.jpg" alt="Fibre pillow on a bed" loading="lazy"></div>
+      <div class="copy">
+        <span class="eyebrow">Pillows</span>
+        <h2>High-loft fibre pillow inserts</h2>
+        <p>Filled with our own 3D hollow fibre and a micro-air breathing layer, so they stay full, soft and cool night after night.</p>
+        <ul class="ticks"><li>Holds its shape after washing</li><li>Breathable, stays cool in warm weather</li><li>OEKO-TEX® Class I fibre</li></ul>
+        <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><button class="add" data-add="Fibre Pillow Inserts (pair)">Add to cart</button></div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="band" id="s-mother-child"><div class="wrap">
+    <div class="split rev">
+      <div class="media"><img src="img/baby-mat.jpg" alt="Baby on a play mat" loading="lazy"></div>
+      <div class="copy">
+        <span class="eyebrow">Mother &amp; Child</span>
+        <h2>Food-grade baby play mats</h2>
+        <p>Non-toxic, waterproof cushioning made from food-grade LDPE pearl cotton, so little ones can crawl and play safely.</p>
+        <ul class="ticks"><li>Food-grade, non-toxic material</li><li>Waterproof and easy to wipe clean</li><li>Soft cushioning for falls</li></ul>
+        <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><button class="add" data-add="Baby Play Mat">Add to cart</button></div>
+      </div>
+    </div>
+  </div></div>
+
+  <!-- Find Your Fit lives inside Home Textile -->
+  <div class="band warm" id="s-find-your-fit"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Find Your Fit</span><h2>Not sure which mattress? Answer four quick questions.</h2><p>We match your weight, sleep position and comfort needs to the right Starich series.</p></div>
+    <div class="quiz" id="quiz" aria-live="polite"></div>
+  </div></div>
+</section>
+
+<!-- ================= PACKAGING ================= -->
+<section class="view" data-view="packaging">
+  <div class="phero"><div class="bg" style="background-image:url('img/woven-sacks.jpg')"></div><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / Packaging</div>
+    <h1>Packaging</h1>
+    <p>Heavy-duty PP woven sacks, high-tensile PET packing straps and reusable woven shopping bags for factories, farms, warehouses and retailers.</p>
+  </div></div>
+  <div class="band"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Packaging products</span><h2>Built to carry heavy loads</h2></div>
+    <div class="grid" data-products="pack"></div>
+  </div></div>
+  <div class="band tint"><div class="wrap">
+    <div class="features">
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><h3>UV-stabilised</h3><p>Sacks hold their strength under the sun during outdoor storage and transport.</p></div>
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 20V9l6-5 6 5v11"/></svg></div><h3>50kg to 850kg</h3><p>From standard bags to jumbo sacks for grain, cement, chemicals and scrap.</p></div>
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M4 12l4-4M4 12l4 4"/></svg></div><h3>High-tensile straps</h3><p>PET packing belts that replace steel strapping for pallets and bales.</p></div>
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 12h6"/></svg></div><h3>Custom printing</h3><p>Bags printed with your brand and product details in bulk orders.</p></div>
+    </div>
+  </div></div>
+  <div class="band"><div class="wrap"><div class="cta-band"><div><h2>Need packaging in volume?</h2><p>Tell us the size, quantity and print you need and we will send a tailored quote.</p></div><div class="acts"><a class="btn btn-primary" href="#contact">Request a Quote</a></div></div></div></div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="view" data-view="about">
+  <div class="phero"><div class="bg" style="background-image:url('img/hero-factory.jpg')"></div><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / About</div>
+    <h1>Innovation and materials, spun into better living</h1>
+    <p>Starich Recycling Technology Co. Ltd is a material-innovation company that makes the fibre inside everything it builds.</p>
+  </div></div>
+  <div class="band"><div class="wrap">
+    <div class="split">
+      <div class="copy">
+        <span class="eyebrow">Our story</span>
+        <h2>From raw fibre to restful nights</h2>
+        <p>Where others buy fibre and assemble products, Starich makes the material itself. Our experience in fibre technology and polymer recovery lets us engineer comfort from the molecule up, sustainably and consistently, at our Aba industrial park.</p>
+        <p>Today we supply chemical fibre to manufacturers, sell our own home textile range to families, and produce industrial packaging for businesses across Nigeria and West Africa.</p>
+      </div>
+      <div class="media"><img src="img/needle-cotton.jpg" alt="Fibre rolls in the Starich warehouse" loading="lazy"></div>
+    </div>
+  </div></div>
+  <div class="band dark"><div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>30,000T+</b><span>Fibre per year</span></div>
+      <div class="stat"><b>1,200+</b><span>Local workforce</span></div>
+      <div class="stat"><b>6</b><span>Regional depots</span></div>
+      <div class="stat"><b>3</b><span>Product divisions</span></div>
+    </div>
+  </div></div>
+  <div class="band"><div class="wrap">
+    <div class="mv">
+      <div><h3>Our mission</h3><p>To make comfort more sustainable, turning circular and advanced materials into products that help people live and sleep better, while leaving less behind.</p></div>
+      <div><h3>Our vision</h3><p>A world where the materials of everyday comfort are circular by default, and where Starich fibre powers homes and industry across the continent.</p></div>
+    </div>
+    <div class="sec-head mt-40"><span class="eyebrow">What we stand for</span><h2>Our values</h2></div>
+    <div class="values">
+      <div class="value"><h3>Circular by design</h3><p>We start with what others discard and turn it into something better.</p></div>
+      <div class="value"><h3>Innovation first</h3><p>Material science and fibre technology sit at the heart of everything we build.</p></div>
+      <div class="value"><h3>Built on trust</h3><p>Honest products and honest claims, backed by verified figures.</p></div>
+      <div class="value"><h3>A lighter future</h3><p>Every decision is weighed against the footprint it leaves behind.</p></div>
+    </div>
+  </div></div>
+  <div class="band tint"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Nationwide network</span><h2>Six depots across Nigeria</h2></div>
+    <div class="depots">
+      <div class="depot"><em>Factory &amp; HQ</em><b>Aba</b><span>KM 12 Aba to Port Harcourt Expressway, Abia State</span></div>
+      <div class="depot"><em>West regional</em><b>Lagos</b><span>Ikeja Industrial Center, Lagos State</span></div>
+      <div class="depot"><em>Northern regional</em><b>Kano</b><span>Sharada Industrial, Kano State</span></div>
+      <div class="depot"><em>Commercial distribution</em><b>Onitsha</b><span>Anambra State, South-East hub</span></div>
+      <div class="depot"><em>Coastal export</em><b>Port Harcourt</b><span>Rivers State, export logistics</span></div>
+      <div class="depot"><em>Central supply</em><b>Abuja</b><span>Idu Industrial Area, FCT</span></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ================= QUALIFICATIONS (overview) ================= -->
+<section class="view" data-view="qualifications">
+  <div class="phero"><div class="bg" style="background-image:url('img/cert_iso.jpg')"></div><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / Qualifications</div>
+    <h1>Qualifications &amp; Certificates</h1>
+    <p>Starich products are independently tested and certified to national and international standards. Select any certificate to view it in full.</p>
+  </div></div>
+  <div class="band"><div class="wrap">
+    <div class="cert-list" id="certList"></div>
+  </div></div>
+  <div class="band tint"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">How we hold the line</span><h2>Quality control at every stage</h2></div>
+    <div class="features" style="grid-template-columns:repeat(3,1fr)">
+      <div class="feature"><h3>Incoming material control</h3><p>Every batch of recovered polymer is cleaned, sorted and graded before it enters the line.</p></div>
+      <div class="feature"><h3>In-process testing</h3><p>Denier, tensile strength, crimp and thermal loft are checked during spinning.</p></div>
+      <div class="feature"><h3>Finished-goods inspection</h3><p>Firmness, dimensions, stitching and labelling are inspected before anything is packed.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ================= SINGLE CERTIFICATE ================= -->
+<section class="view" data-view="cert">
+  <div class="band"><div class="wrap">
+    <div class="crumbs" style="color:var(--muted);margin-bottom:18px"><a href="#home" style="color:var(--leaf)">Home</a> / <a href="#qualifications" style="color:var(--leaf)">Qualifications</a> / <span id="certCrumb"></span></div>
+    <div class="cert-tabs" id="certTabs"></div>
+    <div class="cert-view">
+      <div class="cert-frame" id="certFrame"></div>
+      <div class="cert-meta" id="certMeta"></div>
+    </div>
+    <div class="cert-pager" id="certPager"></div>
+  </div></div>
+</section>
+
+<!-- ================= SHOP ================= -->
+<section class="view" data-view="shop">
+  <div class="phero"><div class="bg" style="background-image:url('img/p_bale.jpg')"></div><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / Shop</div>
+    <h1>Shop Starich</h1>
+    <p>Order online or request a bulk quote. Pay online or by corporate bank transfer.</p>
+  </div></div>
+  <div class="band"><div class="wrap">
+    <div class="shop-bar">
+      <div class="filters" id="filters">
+        <button class="on" data-f="all">All products</button>
+        <button data-f="fibre">Chemical Fibre</button>
+        <button data-f="home">Home Textile</button>
+        <button data-f="pack">Packaging</button>
+      </div>
+      <span class="shop-count" id="shopCount"></span>
+    </div>
+    <div class="grid" id="shopGrid"></div>
+  </div></div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="view" data-view="contact">
+  <div class="phero"><div class="bg" style="background-image:url('img/woven-sacks.jpg')"></div><div class="wrap">
+    <div class="crumbs"><a href="#home">Home</a> / Request a Quote</div>
+    <h1>Request a Quote</h1>
+    <p>Tell us what you need and our sales team will prepare a tailored quotation.</p>
+  </div></div>
+  <div class="band"><div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-lines">
+        <div><small>Phone</small><b>+234 808 033 9999</b></div>
+        <div><small>Email</small><b>starich9999@yahoo.com</b></div>
+        <div><small>Head office</small><b>Aba Industrial Park, Abia State</b></div>
+        <div><a class="btn btn-primary" href="https://wa.me/2348080339999" target="_blank" rel="noopener" style="justify-self:start;margin-top:8px">Chat on WhatsApp</a></div>
+      </div>
+      <form class="quote" id="quoteForm">
+        <label>Company or name<input id="q-name" required></label>
+        <label>Phone<input id="q-phone" type="tel" required></label>
+        <label class="full">Email<input id="q-email" type="email"></label>
+        <label>Product<select id="q-product"><option>Chemical fibre</option><option>Mattresses</option><option>Pillows</option><option>Baby mats</option><option>Woven sacks &amp; straps</option><option>Shopping bags</option><option>Not sure yet</option></select></label>
+        <label>I am a<select id="q-type"><option>Distributor</option><option>Manufacturer</option><option>Hotel or institution</option><option>Export buyer</option><option>Retail customer</option></select></label>
+        <label class="full">Quantity and details<textarea id="q-msg"></textarea></label>
+        <div class="full"><button class="btn btn-primary" type="submit">Send request</button></div>
+      </form>
+    </div>
+  </div></div>
+</section>
+
+</main>
+
+<footer class="site"><div class="wrap">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <a class="brand" href="#home"><img src="img/logo-white.png" alt=""><span><b>STARICH</b><small>RECYCLING TECHNOLOGY CO. LTD</small></span></a>
+      <p>West Africa's chemical fibre and circular-economy manufacturer. Made in Aba, Nigeria.</p>
+      <form class="news" id="newsForm"><input id="news-email" type="email" placeholder="Your email address" aria-label="Email address" required><button class="btn btn-primary" type="submit">Subscribe</button></form>
+    </div>
+    <div><h4>Chemical Fibre</h4><ul><li><a href="#chemical-fibre">Fibre products</a></li><li><a href="#fibre-specs">Specifications</a></li><li><a href="#fibre-supply">Bulk &amp; export</a></li><li><a href="#sustainability">Sustainability</a></li></ul></div>
+    <div><h4>Home Textile</h4><ul><li><a href="#mattresses">Mattresses</a></li><li><a href="#pillows">Pillows</a></li><li><a href="#mother-child">Mother &amp; Child</a></li><li><a href="#find-your-fit">Find Your Fit</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#packaging">Packaging</a></li><li><a href="#qualifications">Qualifications</a></li><li><a href="#contact">Request a Quote</a></li></ul></div>
+    <div><h4>Follow us</h4><ul><li><a href="https://www.facebook.com/starichng/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://instagram.com/officialstarichng" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/@official.starich" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.linkedin.com/company/starich-recycling-technology-co-ltd/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Starich Recycling Technology Co. Ltd. All rights reserved.</span><span>Demo build for review</span></div>
+</div></footer>
+
+<a class="wa" href="https://wa.me/2348080339999" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Certificate full size"><button type="button" aria-label="Close" id="lbClose">×</button><img id="lbImg" alt=""></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  const PRODUCTS=[
+    {cat:'fibre',label:'Chemical Fibre',name:'3D Hollow Polyester Staple Fibre',desc:'The high-resilience fibre inside everything we make. Siliconised and non-siliconised.',img:'img/p_fibre.jpg',price:true,unit:'',tag:'Bestseller',specs:['7D to 15D','GRS 4.0']},
+    {cat:'fibre',label:'Chemical Fibre',name:'Polyester Staple Fibre Bale',desc:'Maximum loft and rebound for bedding, cushions and soft furnishing makers.',img:'img/p_bale.jpg',price:false,unit:'',tag:'New',specs:['Bulk bales','OEM supply']},
+    {cat:'fibre',label:'Chemical Fibre',name:'Glue-Free Needle-Punched Wadding Rolls',desc:'Binder-free thermal waddings for quilting, furniture and insulation.',img:'img/p_rolls.jpg',price:false,unit:'',tag:'Eco',specs:['No glue','Thermal bonded']},
+    {cat:'home',label:'Home Textile',name:'Orthopaedic Series Fibre Mattress',desc:'Hot-press thermal-bonded core built for firm support in our climate.',img:'img/mattress-starich-1.jpg',price:true,unit:'',tag:'Bestseller',specs:['Firm','Orthopaedic']},
+    {cat:'home',label:'Home Textile',name:'High-Loft Fibre Pillow Inserts',desc:'3D fibre pillows with a micro-air breathing layer.',img:'img/pillow-mercury-1.jpg',price:true,unit:'',tag:'Bestseller',specs:['Medium','Breathable']},
+    {cat:'home',label:'Home Textile',name:'Food-Grade Baby Play Mat',desc:'Non-toxic, waterproof cushioning for safe little explorers.',img:'img/baby-mat.jpg',price:true,unit:'',tag:'New',specs:['Food-grade','Waterproof']},
+    {cat:'pack',label:'Packaging',name:'PP Woven Sacks (50kg to 850kg)',desc:'UV-stabilised heavy-duty sacks for grain, cement, chemicals and scrap.',img:'img/p_sacks.jpg',price:false,unit:'',tag:'',specs:['UV-stabilised','Custom print']},
+    {cat:'pack',label:'Packaging',name:'Green PET Packing Belt',desc:'High-tensile strapping for secure pallets and bales.',img:'img/p_belt.jpg',price:false,unit:'',tag:'New',specs:['High tensile','Rust-free']},
+    {cat:'pack',label:'Packaging',name:'Max Woven Shopping Bag',desc:'Reusable woven bag. Good for shopping, built for heavy loads.',img:'img/p_bag.jpg',price:false,unit:'',tag:'',specs:['Reusable','Heavy load']}
+  ];
+  const CERTS=[
+    {id:'oeko-tex',name:'OEKO-TEX® Standard 100',sub:'Class I, the strictest tier',img:'img/cert_oeko.jpg',thumbLogo:false,
+     text:'OEKO-TEX® Standard 100 confirms that our fibre and finished products have been tested free of formaldehyde and other restricted chemicals. Class I is the strictest level, meaning the material is safe even for babies.',
+     facts:[['Issued to','Starich Recycling Technology Co., Ltd'],['Standard','OEKO-TEX® Standard 100'],['Product class','Class I (articles for babies)'],['Covers','Polyester staple fibre and finished goods']]},
+    {id:'grs',name:'Intertek GRS 4.0',sub:'Global Recycled Standard',img:'img/cert_grs.jpg',
+     text:'Intertek has independently verified that our recycled content, chain of custody, and social and environmental practices meet the Global Recycled Standard, version 4.0.',
+     facts:[['Issued to','Starich Recycling Technology Co., Ltd'],['Certifier','Intertek'],['Standard','Global Recycled Standard 4.0'],['Covers','Recycled polyester staple fibre']]},
+    {id:'iso-9001',name:'ISO 9001:2015',sub:'Quality management system',img:'img/cert_iso.jpg',
+     text:'Our quality management system is certified to ISO 9001:2015, the international standard for consistent quality in production, inspection and customer service across our Aba operations.',
+     facts:[['Issued to','Starich Recycling Technology Co., Ltd'],['Standard','ISO 9001:2015'],['Scope','Production of fibre and PET scrap'],['Certificate no.','QCAS-SRT-24-051591159'],['Valid until','14 March 2027'],['Issued by','QCAS Certifications Inc.']]},
+    {id:'son',name:'SON MANCAP',sub:'Standards Organisation of Nigeria',img:'img/badge_son.png',badge:true,
+     text:'The Mandatory Conformity Assessment Programme (MANCAP) certificate from the Standards Organisation of Nigeria confirms that our locally manufactured products meet the relevant Nigerian Industrial Standards.',
+     facts:[['Issued to','Starich Recycling Technology Co., Ltd'],['Authority','Standards Organisation of Nigeria'],['Programme','MANCAP'],['Certificate copy','Available on request']]}
+  ];
+
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  const toastEl=$('#toast'); let tt;
+  function toast(msg){toastEl.textContent=msg;toastEl.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>toastEl.classList.remove('show'),2600)}
+
+  // Cart (demo)
+  let cart=0;
+  function addToCart(name){cart++;const c=$('#cartCount');c.textContent=cart;c.hidden=false;toast(name+' added to cart')}
+  document.addEventListener('click',e=>{
+    const a=e.target.closest('[data-add]'); if(a){addToCart(a.dataset.add);return}
+    const q=e.target.closest('[data-quote]'); if(q){location.hash='contact';return}
+    const t=e.target.closest('[data-toast]'); if(t){toast(t.dataset.toast)}
+  });
+
+  // Product cards
+  function card(p){
+    const foot=p.price?`<button class="add" data-add="${p.name}">Add to cart</button><button class="linkbtn" type="button" data-quote>Request quote</button>`
+      :`<button class="add" data-quote>Request quote</button>`;
+    return `<article class="card"><div class="ph"><img src="${p.img}" alt="${p.name}" loading="lazy">${p.tag?`<span class="tag">${p.tag}</span>`:''}</div>
+      <div class="body"><span class="cat">${p.label}</span><h3>${p.name}</h3><p>${p.desc}</p><div class="specs">${p.specs.map(s=>`<span>${s}</span>`).join('')}</div><div class="foot">${foot}</div></div></article>`;
+  }
+  $$('[data-products]').forEach(g=>{g.innerHTML=PRODUCTS.filter(p=>p.cat===g.dataset.products).map(card).join('')});
+  function renderShop(f){const list=PRODUCTS.filter(p=>f==='all'||p.cat===f);$('#shopGrid').innerHTML=list.map(card).join('');$('#shopCount').textContent='Showing '+list.length+' products'}
+  $('#filters').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$$('#filters button').forEach(x=>x.classList.toggle('on',x===b));renderShop(b.dataset.f)});
+  renderShop('all');
+
+  // Certificates: menus, overview, single view
+  const menuHTML=CERTS.map(c=>`<a href="#cert-${c.id}"><b>${c.name}</b><span>${c.sub}</span></a>`).join('')+`<hr><a href="#qualifications"><b>All certificates</b><span>Overview and quality control</span></a>`;
+  $('#certMenu').innerHTML=menuHTML;
+  $('#certMenuM').innerHTML=CERTS.map(c=>`<a href="#cert-${c.id}">${c.name}</a>`).join('')+`<a href="#qualifications">All certificates</a>`;
+  $('#certList').innerHTML=CERTS.map(c=>`<a class="cert-card" href="#cert-${c.id}"><div class="ph"><img src="${c.img}" alt="${c.name} certificate" class="${c.badge?'logo-only':''}" loading="lazy"></div><div class="body"><h3>${c.name}</h3><span>${c.sub}</span><span class="go">View certificate →</span></div></a>`).join('');
+  function showCert(id){
+    const i=Math.max(0,CERTS.findIndex(c=>c.id===id)), c=CERTS[i];
+    $('#certCrumb').textContent=c.name;
+    $('#certTabs').innerHTML=CERTS.map(x=>`<a href="#cert-${x.id}" class="${x.id===c.id?'on':''}">${x.name}</a>`).join('');
+    $('#certFrame').innerHTML=c.badge?`<img class="badge-big" src="${c.img}" alt="${c.name}">`:`<button type="button" data-zoom="${c.img}" aria-label="View ${c.name} certificate full size"><img src="${c.img}" alt="${c.name} certificate"></button>`;
+    $('#certMeta').innerHTML=`<span class="eyebrow">Certificate ${i+1} of ${CERTS.length}</span><h2>${c.name}</h2><span class="sub">${c.sub}</span><p>${c.text}</p><dl class="facts">${c.facts.map(f=>`<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join('')}</dl><div style="display:flex;gap:12px;flex-wrap:wrap">${c.badge?'':`<button class="btn btn-ghost" type="button" data-zoom="${c.img}">View full size</button>`}<a class="btn btn-primary" href="#contact">Request a copy</a></div>`;
+    const prev=CERTS[(i-1+CERTS.length)%CERTS.length], next=CERTS[(i+1)%CERTS.length];
+    $('#certPager').innerHTML=`<a href="#cert-${prev.id}"><small>← Previous</small><b>${prev.name}</b></a><a href="#cert-${next.id}" style="text-align:right"><small>Next →</small><b>${next.name}</b></a>`;
+  }
+  const lb=$('#lightbox');
+  document.addEventListener('click',e=>{const z=e.target.closest('[data-zoom]');if(z){$('#lbImg').src=z.dataset.zoom;lb.classList.add('open')}});
+  $('#lbClose').onclick=()=>lb.classList.remove('open');
+  lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open')});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');closeDrawer()}});
+
+  // Find Your Fit quiz
+  const Q=[
+    {q:'What is your body weight range?',o:[['Under 70kg','Lighter frame'],['70 to 100kg','Average frame'],['Above 100kg','Heavier frame'],['Two sleepers','Sharing a bed']]},
+    {q:'How do you usually sleep?',o:[['On my back','Needs even support'],['On my side','Needs softer shoulders'],['On my stomach','Needs a flatter, firmer surface'],['I move around','A bit of everything']]},
+    {q:'Do you have back or joint pain?',o:[['Yes, often','Firm support helps'],['Sometimes','Some extra support'],['No','Comfort comes first']]},
+    {q:'Who is the mattress for?',o:[['My home','Everyday family use'],['A hotel or guest house','Heavy, repeat use'],['A school, hostel or hospital','Durable, value for money']]}
+  ];
+  let step=0, ans=[];
+  const quiz=$('#quiz');
+  function renderQuiz(){
+    if(step>=Q.length){return renderResult()}
+    const it=Q[step];
+    quiz.innerHTML=`<div class="progress"><i style="width:${(step/Q.length)*100}%"></i></div><span class="qnum">Question ${step+1} of ${Q.length}</span><h3>${it.q}</h3><div class="opts">${it.o.map((o,k)=>`<button class="opt" type="button" data-k="${k}"><b>${o[0]}</b><span>${o[1]}</span></button>`).join('')}</div>${step?'<button class="linkbtn" type="button" data-back>← Back</button>':''}`;
+  }
+  function renderResult(){
+    let firm=0; if(ans[0]>=2)firm+=2; else if(ans[0]===1)firm+=1;
+    if(ans[1]===0||ans[1]===2)firm+=1; if(ans[2]===0)firm+=2; else if(ans[2]===1)firm+=1;
+    let pick;
+    if(ans[3]===2) pick={n:'Classic Series',img:'img/p_mattress.jpg',why:'Durable, medium-firm support at a price that works for institutions buying in volume.'};
+    else if(firm>=3) pick={n:'Orthopaedic Series',img:'img/mattress-starich-1.jpg',why:'Your answers point to firm, even support. The high-density orthopaedic core keeps your spine aligned and does not sag.'};
+    else pick={n:'Comfort Series',img:'img/mattress-starich-2.jpg',why:'You need a balanced feel. The Comfort Series gives gentle cushioning on top with steady fibre support underneath.'};
+    quiz.innerHTML=`<div class="progress"><i style="width:100%"></i></div><div class="result"><img src="${pick.img}" alt="${pick.n}"><div class="copy"><span class="eyebrow">Your best match</span><h3>${pick.n}</h3><p style="color:var(--muted)">${pick.why}</p><div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center"><a class="btn btn-primary" href="#mattresses">See the series</a><button class="linkbtn" type="button" data-restart>Start again</button></div></div></div>`;
+  }
+  quiz.addEventListener('click',e=>{
+    const o=e.target.closest('.opt'); if(o){ans[step]=+o.dataset.k;step++;renderQuiz();return}
+    if(e.target.closest('[data-back]')){step--;renderQuiz();return}
+    if(e.target.closest('[data-restart]')){step=0;ans=[];renderQuiz()}
+  });
+  renderQuiz();
+
+  // Forms (demo)
+  $('#quoteForm').addEventListener('submit',e=>{e.preventDefault();toast('Thank you. In the live site this request goes to the sales team.');e.target.reset()});
+  $('#newsForm').addEventListener('submit',e=>{e.preventDefault();toast('Subscribed. Thank you.');e.target.reset()});
+
+  // Drawer
+  const drawer=$('#drawer');
+  function closeDrawer(){drawer.classList.remove('open');drawer.setAttribute('aria-hidden','true')}
+  $('#menuBtn').onclick=()=>{drawer.classList.add('open');drawer.setAttribute('aria-hidden','false')};
+  drawer.addEventListener('click',e=>{if(e.target.closest('[data-close]')||e.target.closest('a'))closeDrawer()});
+
+  // Router: plain #names only
+  const ROUTES={
+    'home':['home'],'chemical-fibre':['chemical-fibre'],'fibre-products':['chemical-fibre','s-fibre-products'],'fibre-specs':['chemical-fibre','s-fibre-specs'],'fibre-supply':['chemical-fibre','s-fibre-supply'],'sustainability':['chemical-fibre','s-sustainability'],
+    'home-textile':['home-textile'],'mattresses':['home-textile','s-mattresses'],'pillows':['home-textile','s-pillows'],'mother-child':['home-textile','s-mother-child'],'find-your-fit':['home-textile','s-find-your-fit'],
+    'packaging':['packaging'],'about':['about'],'qualifications':['qualifications'],'shop':['shop'],'contact':['contact']
+  };
+  CERTS.forEach(c=>ROUTES['cert-'+c.id]=['cert',null,c.id]);
+  const NAVKEY={'chemical-fibre':'chemical-fibre','home-textile':'home-textile','packaging':'packaging','about':'about','qualifications':'qualifications','cert':'qualifications'};
+  function route(){
+    const h=(location.hash||'#home').slice(1);
+    const r=ROUTES[h]||ROUTES.home;
+    $$('.view').forEach(v=>v.classList.toggle('active',v.dataset.view===r[0]));
+    $$('[data-nav]').forEach(n=>n.classList.toggle('active',n.dataset.nav===NAVKEY[r[0]]));
+    if(r[0]==='cert')showCert(r[2]);
+    document.activeElement && document.activeElement.blur && document.activeElement.closest('.nav-item') && document.activeElement.blur();
+    requestAnimationFrame(()=>{
+      if(r[1]){const el=document.getElementById(r[1]);const hh=document.querySelector('header.site').offsetHeight;window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-hh+1,behavior:'smooth'})}
+      else window.scrollTo({top:0});
+    });
+  }
+  window.addEventListener('hashchange',route);
+  route();
+})();
+</script>
+
+</body>
+</html>
